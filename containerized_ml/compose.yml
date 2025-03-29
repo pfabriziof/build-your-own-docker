@@ -1,0 +1,18 @@
+name: jupyter-nb
+
+services:
+  transformers-notebook:
+    #image: docker.io/jupyter/tensorflow-notebook
+    build: ./
+    environment:
+      - JUPYTER_TOKEN=iambatman
+      - NB_UID=${UID}
+      - NB_GID=${GID}
+      - JUPYTER_RUNTIME_DIR=/tmp/jupyter-runtime
+      # - CHOWN_EXTRA="${PWD}"
+      # - CHOWN_EXTRA_OPTS="-R"
+    volumes:
+      - ./:/home/jovyan:z
+    working_dir: /home/jovyan
+    ports:
+      - 8080:8888
