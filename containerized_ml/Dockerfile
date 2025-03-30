@@ -7,3 +7,5 @@ RUN pip install --upgrade pip && \
     pip install transformers pysrt
 
 USER ${NB_UID}
+
+COPY work/captions_english.srt work/translator.ipynb ./

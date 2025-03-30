@@ -3,3 +3,5 @@ name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
 version = "0.0.1"
+
+[tool.commitizen.customize]

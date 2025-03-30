@@ -3,4 +3,6 @@
 .jupyter/
 .ipython/
 .ipynb_checkpoints/
-
+.bash_history
+.keras
+.cache
