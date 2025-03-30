@@ -8,13 +8,10 @@ services:
       - JUPYTER_TOKEN=iambatman
       - NB_USER=${USER}
       - CHOWN_HOME=yes
-      # - NB_UID=${UID}
-      # - NB_GID=${GID}
-      # - JUPYTER_RUNTIME_DIR=/tmp/jupyter-runtime
       - CHOWN_EXTRA=/home/jovyan/
       - CHOWN_EXTRA_OPTS=-R
     volumes:
-      - ${PWD}/work/:/home/jovyan/work
-    working_dir: /home/jovyan
+      - ${PWD}/work/:/home/jovyan/
+    working_dir: /home/jovyan/
     ports:
       - 8080:8888

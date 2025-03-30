@@ -6,4 +6,4 @@ USER root
 RUN pip install --upgrade pip && \
     pip install transformers pysrt
 
-# USER ${NB_UID}
+USER ${NB_UID}
